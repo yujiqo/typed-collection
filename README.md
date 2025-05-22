@@ -12,7 +12,7 @@ cmake --build build
 ```
 
 And the task ChatGPT gave me:
->Practice Task: Implement a simple Typed Collection class template
+>Practice Task: Implement a simple Typed Collection class template <br>
 >Requirements:
 >	1.	Create a template class TypedCollection<T> that stores objects of type T internally using a std::vector<std::shared_ptr<T>>.
 >	2.	Add methods:
