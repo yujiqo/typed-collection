@@ -16,12 +16,16 @@ namespace tc {
     public:
         TypedCollection() = default;
 
-        TypedCollection(TypedCollection&& other) {
-            this->container = std::move(other.container);
-        };
+        TypedCollection(TypedCollection&& other) : container(std::move(other.container)) {};
 
         TypedCollection(const TypedCollection& other) {
-            this->container = other.container;
+            std::vector<std::shared_ptr<T>> vec;
+
+            for (auto& item : other.container) {
+                vec.push_back(std::make_shared(*item));
+            }
+
+            this->container = std::move(vec);
         };
 
         void add(const T& item) {

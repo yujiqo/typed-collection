@@ -8,7 +8,7 @@ using tc::TypedCollection, tc::Copyable;
 
 template<Copyable T>
 struct TypedCollectionPrinter {
-    static void print(TypedCollection<T> collection) {
+    static void print(TypedCollection<T>& collection) {
         collection.forEach([](shared_ptr<T> item) {
             cout << *item << " ";
         });
