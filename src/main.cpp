@@ -1,7 +1,7 @@
 #include <iostream>
 #include <memory>
 
-#include "TypedCollection.hpp"
+#include "../headers/TypedCollection.hpp"
 
 using std::shared_ptr, std::cout, std::endl;
 using tc::TypedCollection, tc::Copyable;
